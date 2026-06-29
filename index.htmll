@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>លិខិតអញ្ជើញពិធីចងដៃជូនពរ (Blessing String Ritual) - ហួកាំង ថារ៉ា & ខេន លីដា</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Moul&family=Hanuman:wght@400;700&family=Freehand&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="invitation-container">
+        <!-- Header Image -->
+        <div class="khmer-sticker-header">
+            <img src="https://github.com/tharahuokaing/weeding/blob/main/weeding.png?raw=true" alt="Decorative Traditional Header Sign">
+        </div>
+
+        <h1 class="title-moul">សេចក្តីជូនដំណឹង និងអញ្ជើញចូលរួម<br>ក្នុងពិធីចងដៃជូនពរ (Blessing String Ritual)</h1>
+
+        <h3 class="parents-section-title">យើងខ្ញុំជាមាតាបិតា</h3>
+        <div class="parents-grid">
+            <div>
+                <span class="side-title">មាតាបិតាខាងប្រុស</span>
+                លោក <span class="parent-names">ហួ កាំង</span><br>
+                លោកស្រី <span class="parent-names">ហង្ស ស៊ីថា</span><br>
+                ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់
+            </div>
+            <div>
+                <span class="side-title">មាតាបិតាខាងស្រី</span>
+                លោក <span class="parent-names">ហ៊ុន ខេន</span><br>
+                លោកស្រី <span class="parent-names">N/A</span><br>
+                ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់
+            </div>
+        </div>
+
+        <p class="ceremony-text">
+            មានកិត្តិយសសូមគោរពអញ្ជើញ <span class="honorific-highlight">ឯកឧត្តម លោកជំទាវ លោកអ្នកស្រី លោកឧកញ៉ា អ្នកឧកញ៉ា លោកអ្នកឧកញ៉ា ព្រះមហាក្សត្រ</span> និងញាតិមិត្តជិតឆ្ងាយទាំងអស់ ដើម្បីចូលរួមជាអធិបតីភាព និងផ្តល់កិត្តិយសដ៏ខ្ពង់ខ្ពស់ក្នុងពិធីចងដៃជូនពរ (Blessing String Ritual) ដើម្បីជូនពរជ័យសិរីសួស្តី ក្នុងពិធីមង្គលការកូនប្រុស កូនស្រីរបស់យើងខ្ញុំ៖
+        </p>
+
+        <div class="couple-container">
+            <div class="couple-label">— កូនកំលោះ —</div>
+            <span class="couple-name">ហួកាំង ថារ៉ា</span>
+            <div class="and-connector"> និង </div>
+            <div class="couple-label">— កូនក្រមុំ —</div>
+            <span class="couple-name">ខេន លីដា</span>
+        </div>
+
+        <div class="datetime-section">
+            <div class="datetime-title">កាលបរិច្ឆេទកម្មវិធី</div>
+            <p class="datetime-date">
+                ថ្ងៃ..... ទី..... ខែ..... ឆ្នាំ២០២៦<br>
+                <span class="lunar-date">(ត្រូវនឹងថ្ងៃ ... កើត ខែមាឃ ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០)</span>
+            </p>
+        </div>
+        
+        <!-- Wedding Program Section - Displaying Blessing String Ritual Only -->
+        <div class="program-wrapper">
+            <button class="btn-program-toggle" onclick="toggleProgram()">
+                📋 សូមចុចទីនេះដើម្បីមើលកម្មវិធីចងដៃជូនពរ
+            </button>
+
+            <div id="weddingTimeline" class="timeline-container collapsed">
+                <h4 class="timeline-main-title">
+                    ⏱️ កម្មវិធីពិធីការតាមពេលវេលាកំណត់ (Blessing String Ritual)
+                </h4>
+
+                <div class="timeline-item highlight-banquet">
+                    <div class="time-badge">១១:៣០ ព្រឹក</div>
+                    <div class="timeline-content">
+                        <a href="https://tharahuokaing.github.io/weeding_weeding_blessing/" target="_blank">
+                            អញ្ជើញភ្ញៀវកិត្តិយសចូលរួមពិធីចងដៃជូនពរ (Blessing String Ritual)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Location Section -->
+        <div class="location-section">
+            <span class="location-title">កម្មវិធីរៀបចំឡើងនៅ៖</span>
+            <span class="location-name">ភោជនីយដ្ឋាន ផ្កាយ ៥ ហួ កាំង</span>
+            <span class="location-sub">(សាខាមុខកំពូល ខេត្តកណ្តាល ព្រះរាជាណាចក្រកម្ពុជា)</span>
+        </div>
+
+        <div class="blessing">
+            វត្តមានដ៏ខ្ពង់ខ្ពស់របស់លោកអ្នក គឺជាកិត្តិយសដ៏ធំធេងសម្រាប់គ្រួសារយើងខ្ញុំ!<br>
+            សូមអរគុណ និងសូមគោរពអញ្ជើញដោយក្តីរាប់អាន!
+        </div>
+
+        <!-- Footer Image -->
+        <div class="khmer-sticker-footer">
+            <img src="https://github.com/tharahuokaing/weeding/blob/main/weeding_footer.png?raw=true" alt="Decorative Traditional Footer Sign">
+        </div>
+    </div>
+    
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">⬆️ ត្រឡប់ទៅកំពូល</button>
+
+    <!-- External JavaScript Core Logic -->
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
