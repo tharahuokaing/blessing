@@ -733,3 +733,112 @@ footer {
         display: none !important;
     }
 }
+
+/* Program Wrapper Layout */
+.program-wrapper {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Toggle Button */
+.btn-program-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: 550px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #b8860b 0%, #8b6508 100%);
+    border: 2px solid #6b4b00;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-program-toggle:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #a67c00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(184, 134, 11, 0.4);
+}
+
+/* Timeline Container Collapsed vs Expanded State */
+.timeline-container {
+    max-width: 550px;
+    margin: 15px auto 0 auto;
+    padding: 20px;
+    background: #fffaf0;
+    border: 2px solid #b8860b;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(80, 40, 0, 0.15);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.timeline-container.collapsed {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.timeline-container.expanded {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInDown 0.35s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline Item Details */
+.timeline-main-title {
+    color: #8b0000;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f5e7c1;
+    border-radius: 8px;
+    border-left: 4px solid #8b0000;
+}
+
+.time-badge {
+    background: #8b0000;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.timeline-link {
+    color: #4b2e17;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.timeline-link:hover {
+    color: #8b0000;
+    text-decoration: underline;
+}
