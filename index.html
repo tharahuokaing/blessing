@@ -54,11 +54,12 @@
                 <span class="lunar-date">(ត្រូវនឹងថ្ងៃ ... កើត ខែមាឃ ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០)</span>
             </p>
         </div>
-        
+
         <!-- Wedding Program Section - Displaying Blessing String Ritual Only -->
         <div class="program-wrapper">
-            <button class="btn-program-toggle" onclick="toggleProgram()">
-                📋 សូមចុចទីនេះដើម្បីមើលកម្មវិធីចងដៃជូនពរ
+            <button id="programToggleBtn" class="btn-program-toggle" onclick="toggleProgram()" aria-expanded="false" aria-controls="weddingTimeline">
+                <span class="btn-text">📋 សូមចុចទីនេះដើម្បីមើលកម្មវិធីចងដៃជូនពរ / Click to view Blessing Program</span>
+                <span class="toggle-icon">▼</span>
             </button>
 
             <div id="weddingTimeline" class="timeline-container collapsed">
@@ -67,10 +68,10 @@
                 </h4>
 
                 <div class="timeline-item highlight-banquet">
-                    <div class="time-badge">១១:៣០ ព្រឹក</div>
+                    <div class="time-badge">១១:៣០ ព្រឹក / 11:30 AM</div>
                     <div class="timeline-content">
-                        <a href="https://tharahuokaing.github.io/weeding_weeding_blessing/" target="_blank">
-                            អញ្ជើញភ្ញៀវកិត្តិយសចូលរួមពិធីចងដៃជូនពរ (Blessing String Ritual)
+                        <a href="https://tharahuokaing.github.io/weeding_weeding_blessing/" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            អញ្ជើញភ្ញៀវកិត្តិយសចូលរួមពិធីចងដៃជូនពរ (Blessing String Ritual) 🔗
                         </a>
                     </div>
                 </div>
