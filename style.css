@@ -152,9 +152,9 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease-out, opacity 0.4s ease;
     margin-top: 20px;
-    text-align: left;
+    text-align: start; /* Logical property for LTR/RTL support */
     background: #fffdf9;
-    border-left: 3px solid #d4af37;
+    border-inline-start: 3px solid #d4af37; /* Logical border */
     padding: 10px 15px;
 }
 
@@ -185,7 +185,7 @@ body {
     font-weight: bold;
     padding: 3px 8px;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-inline-end: 10px; /* Logical margin for gap */
     white-space: nowrap;
 }
 
@@ -251,7 +251,7 @@ body {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    inset-inline-end: 20px; /* Adapts to left/right depending on dir */
     z-index: 999;
     background: #b11116;
     color: white;
@@ -385,7 +385,7 @@ a:hover {
     border: 2px solid var(--led-green);
     border-radius: 12px;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9), 0 0 10px var(--led-green-glow);
-    text-align: left;
+    text-align: start; /* Logical property */
     scroll-behavior: smooth;
 }
 
@@ -406,7 +406,7 @@ a:hover {
     margin-bottom: 16px;
     padding: 14px 18px;
     background: rgba(12, 18, 14, 0.95);
-    border-left: 4px solid var(--led-green);
+    border-inline-start: 4px solid var(--led-green); /* Logical left/right border */
     border-radius: 8px;
 }
 
@@ -428,7 +428,7 @@ a:hover {
 .led-running::after {
     content: "█";
     display: inline-block;
-    margin-left: 4px;
+    margin-inline-start: 4px; /* Logical margin for character space */
     color: var(--led-green);
     animation: ledBlink 0.5s infinite alternate;
 }
@@ -443,12 +443,12 @@ a:hover {
    ========================================================================== */
 .warning-box {
     background: var(--warning-bg);
-    border-left: 6px solid var(--warning-border);
+    border-inline-start: 6px solid var(--warning-border); /* Logical left/right border */
     border-radius: 8px;
     padding: 18px;
     margin: 25px auto;
     color: #5a3a00;
-    text-align: left;
+    text-align: start; /* Logical property */
     max-width: 600px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
@@ -459,7 +459,7 @@ a:hover {
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: start; /* Logical property */
 }
 
 .card-header-group {
@@ -493,13 +493,13 @@ a:hover {
     font-weight: bold;
     font-size: 0.95rem;
     box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5);
-    user-select: all; /* Allows quick full-word copying */
+    user-select: all;
 }
 
 .word-box span {
     color: var(--accent-red);
     font-weight: bold;
-    margin-right: 6px;
+    margin-inline-end: 6px; /* Logical margin for prefix index */
     font-size: 0.85em;
 }
 
@@ -634,7 +634,7 @@ footer {
     }
 
     .seed-phrase-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
 
@@ -650,7 +650,7 @@ footer {
     .btn-ai-read {
         width: 100%;
         min-width: unset;
-        padding: 14px; /* Larger touch target for Android thumbs */
+        padding: 14px;
     }
 
     .khmer-sticker-header img,
@@ -662,7 +662,7 @@ footer {
 /* Small Smartphone Displays (under 480px) */
 @media screen and (max-width: 480px) {
     .seed-phrase-grid {
-        grid-template-columns: 1fr; /* Single column layout for compact devices */
+        grid-template-columns: 1fr;
     }
 
     .warning-box {
@@ -684,7 +684,7 @@ footer {
     }
 
     .seed-phrase-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 clean columns on large screens */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -819,7 +819,7 @@ footer {
     padding: 12px;
     background: #f5e7c1;
     border-radius: 8px;
-    border-left: 4px solid #8b0000;
+    border-inline-start: 4px solid #8b0000; /* Logical border */
 }
 
 .time-badge {
@@ -841,4 +841,23 @@ footer {
 .timeline-link:hover {
     color: #8b0000;
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   12. EXPLICIT RTL OVERRIDES
+   ========================================================================== */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .invitation-container,
+[dir="rtl"] .secure-container,
+[dir="rtl"] .program-wrapper {
+    text-align: center; /* Keep explicit container headers centered */
+}
+
+[dir="rtl"] .timeline-item,
+[dir="rtl"] .step-item {
+    flex-direction: row-reverse; /* Ensure icons or time badges sit nicely in RTL sequence */
+    justify-content: flex-end;
 }
